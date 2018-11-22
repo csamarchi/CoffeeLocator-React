@@ -1,25 +1,32 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Auth from './Auth';
+import { Route, Switch } from 'react-router-dom';
+import MainComponent from './MainComponent';
+import Welcome from './Welcome';
+import Signup from './Signup';
+import Aboutyou from './Aboutyou';
+import { Button } from 'semantic-ui-react';
+
 
 class App extends Component {
+
+
+
+
   render() {
+
     return (
+
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Switch>
+          <Route exact path="/login" component={Auth} />
+          <Route exact path='/welcome' component={Welcome} />
+          <Route exact path="/" component={MainComponent} />
+          <Route exact path='/signup' component={Signup} />
+          <Route exact path='/aboutyou' component={Aboutyou} />
+        </Switch>
       </div>
     );
   }
