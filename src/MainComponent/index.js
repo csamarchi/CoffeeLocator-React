@@ -17,7 +17,7 @@ export default class MainComponent extends Component {
         location: data
       })
     });
-
+   
   render(){
     return(
       <div className="App">
