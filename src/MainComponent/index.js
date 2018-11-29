@@ -13,11 +13,12 @@ export default class MainComponent extends Component {
 
 
     getLoc = navigator.geolocation.getCurrentPosition((data) => {
+      console.log(data, 'LOCATION')
       this.setState({
         location: data
       })
     });
-   
+   n
   render(){
     return(
       <div className="App">
